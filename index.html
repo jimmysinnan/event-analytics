@@ -1109,19 +1109,24 @@ footer {
       <h2 class="section-h2">Voyez l'outil <em>en action.</em></h2>
       <p class="section-sub">Une démonstration complète de la plateforme sur des données réelles de festival.</p>
     </div>
-    <div class="video-container reveal">
-      <!-- Quand la vidéo MP4 est disponible, remplacer par :
-           <video src="video/demo.mp4" controls poster="video/poster.jpg" style="width:100%;height:100%;object-fit:cover"></video>
-      -->
-      <div class="video-placeholder">
-        <button class="play-btn" onclick="openModal()">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </button>
-        <p style="margin-top:8px"><strong style="color:white">Présentation Event Analytics — 1 min 20</strong></p>
-        <p style="margin-top:8px">Demandez la démo pour voir la plateforme en direct sur vos données.</p>
+    <div class="video-container reveal" style="background:#000;border-radius:20px;overflow:hidden;position:relative;">
+      <video
+        id="demoVideo"
+        src="demo.mp4"
+        style="width:100%;height:100%;object-fit:cover;display:block;"
+        preload="metadata"
+        playsinline
+      ></video>
+      <!-- Overlay play personnalisé -->
+      <div id="videoOverlay" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(5,8,15,0.6);backdrop-filter:blur(2px);cursor:pointer;transition:opacity 0.3s;" onclick="playVideo()">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--terracotta);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(200,92,60,0.6);margin-bottom:16px;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="white" style="margin-left:4px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <p style="color:white;font-size:16px;font-weight:600;margin:0;">Présentation Event Analytics</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-top:6px;">80 secondes · 8 scènes · Données réelles</p>
       </div>
     </div>
-    <p class="video-note">8 scènes · Données réelles · Rendu avec Remotion</p>
+    <p class="video-note">Rendu avec <a href="https://remotion.dev" style="color:var(--terracotta)">Remotion</a> · 2400 frames · 1920×1080</p>
   </div>
 </section>
 
@@ -1157,9 +1162,7 @@ footer {
     <div id="formContent">
       <h2 class="modal-title">Demandez votre<br><em>démo gratuite</em></h2>
       <p class="modal-sub">Réponse sous 48h. Nous adaptons la démonstration à votre secteur et vos données.</p>
-      <!-- ACTION : formspree.io → "New Form" → remplacer YOUR_FORM_ID par l'ID à 8 caractères -->
-      <!-- Ou utiliser directement l'email : https://formspree.io/jimmysinnan@gmail.com -->
-      <form action="https://formspree.io/jimmysinnan@gmail.com" method="POST" onsubmit="handleSubmit(event)">
+      <form action="https://formspree.io/f/xwvayzev" method="POST" onsubmit="handleSubmit(event)">
         <input type="hidden" name="_subject" value="Demande de démo Event Analytics" />
         <input type="hidden" name="_replyto" value="" />
         <div class="form-grid">
@@ -1286,17 +1289,29 @@ async function handleSubmit(e) {
       body:    data,
       headers: { Accept: 'application/json' }
     })
+    const json = await res.json().catch(() => ({}))
 
     if (res.ok) {
+      // Succès
       document.getElementById('formContent').style.display = 'none'
       document.getElementById('formSuccess').style.display = 'block'
+    } else if (json?.error === 'FORM_NOT_FOUND' || res.status === 404) {
+      // Formspree : endpoint email non encore vérifié
+      window.location.href = 'mailto:jimmysinnan@gmail.com?subject=Demande de démo Event Analytics&body=Bonjour,%0A%0AJe souhaite une démonstration d\'Event Analytics.%0A%0ANom :%0AEmail :%0AType d\'événement :%0ABesoin :%0A'
     } else {
-      throw new Error('Erreur serveur')
+      throw new Error(json?.error || 'Erreur')
     }
   } catch {
     btn.innerHTML = origTxt
     btn.disabled  = false
-    alert('Une erreur est survenue. Réessayez ou contactez jimmysinnan@gmail.com directement.')
+    // Fallback propre : ouvrir le client mail
+    const prenom = form.querySelector('[name=prenom]')?.value || ''
+    const email  = form.querySelector('[name=email]')?.value  || ''
+    const type   = form.querySelector('[name=type_evenement]')?.value || ''
+    const besoin = form.querySelector('[name=besoin]')?.value || ''
+    const subject = encodeURIComponent('Demande de démo Event Analytics')
+    const body    = encodeURIComponent(`Prénom : ${prenom}\nEmail : ${email}\nType d'événement : ${type}\nBesoin : ${besoin}`)
+    window.location.href = `mailto:jimmysinnan@gmail.com?subject=${subject}&body=${body}`
   }
 }
 
@@ -1304,6 +1319,29 @@ async function handleSubmit(e) {
 const style = document.createElement('style')
 style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }'
 document.head.appendChild(style)
+
+// ── Vidéo player ─────────────────────────────────────────────
+function playVideo() {
+  const video   = document.getElementById('demoVideo')
+  const overlay = document.getElementById('videoOverlay')
+  if (!video) return
+  overlay.style.opacity = '0'
+  overlay.style.pointerEvents = 'none'
+  video.play()
+  video.controls = true
+}
+// Re-afficher l'overlay si la vidéo est mise en pause
+const videoEl = document.getElementById('demoVideo')
+if (videoEl) {
+  videoEl.addEventListener('pause', () => {
+    const overlay = document.getElementById('videoOverlay')
+    if (overlay && videoEl.ended) {
+      overlay.style.opacity = '1'
+      overlay.style.pointerEvents = 'all'
+      videoEl.controls = false
+    }
+  })
+}
 </script>
 </body>
 </html>
