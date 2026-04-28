@@ -474,7 +474,7 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
       <div>
         <div class="hero-tag">
           <span class="hero-tag-dot"></span>
-          Plateforme analytics événementielle
+          Cockpit décisionnel pour l'événementiel
         </div>
         <h1 class="d1 hero-headline">
           De l'instinct<br>
@@ -483,10 +483,10 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
         <p class="hero-sub">Centralisez billetterie, consommation et rentabilité. Chaque décision devient chiffrée, comparable, actionnable — avant, pendant et après votre événement.</p>
         <div class="hero-actions">
           <button onclick="openModal()" class="btn btn-primary btn-lg">
-            Demander une démo gratuite
+            Évaluer mon événement gratuitement
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <a href="#modules" class="btn btn-inv btn-lg">Explorer les modules</a>
+          <a href="#modules" class="btn btn-inv btn-lg">Voir les modules</a>
         </div>
         <div class="hero-kpis">
           <div class="hero-kpi">
@@ -585,7 +585,7 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
           <span class="prob-num">03</span>
           <div class="prob-body">
             <strong>Pas de vue consolidée.</strong>
-            <p>Impossible de croiser billetterie et consommation en temps réel.</p>
+            <p>Impossible de croiser billetterie, consommation et invitations sans retraitement manuel.</p>
           </div>
         </li>
         <li class="prob-item sr sr-4">
@@ -828,52 +828,45 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
 <section class="bg-surface" id="pourquoi">
   <div class="wrap">
     <div class="sr">
-      <p class="eyebrow">Différenciation</p>
+      <p class="eyebrow">Bénéfices métier</p>
       <h2 class="d2">Pourquoi choisir <em>Event Analytics</em> ?</h2>
-      <p class="lead" style="margin-top:.875rem">Pas un tableur amélioré. Pas un BI généraliste à configurer. Une plateforme pensée pour les professionnels de l'événementiel.</p>
+      <p class="lead" style="margin-top:.875rem">Un cockpit décisionnel qui transforme vos fichiers dispersés en décisions actionnables — avant, pendant et après chaque édition.</p>
     </div>
-    <div class="why-grid">
+    <div class="why-grid" style="grid-template-columns:repeat(3,1fr)">
       <div class="why-card sr">
         <div class="why-icon" style="background:rgba(200,92,60,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <div class="why-title">Construit pour votre métier</div>
-        <p class="why-desc">Chaque indicateur est pensé pour l'événementiel : panier moyen festivalier, rentabilité des invitations, prévision de stocks par bar. Pas de paramétrage.</p>
+        <div class="why-title">Gagnez du temps</div>
+        <p class="why-desc">Fini la consolidation manuelle : vos données sont centralisées, structurées et prêtes à l'emploi. Ce qui prenait 3 jours se fait après l'import.</p>
       </div>
       <div class="why-card sr sr-1">
         <div class="why-icon" style="background:rgba(43,76,138,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B4C8A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B4C8A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
         </div>
-        <div class="why-title">Vos données, vos règles</div>
-        <p class="why-desc">Déploiement adapté à votre infrastructure. Vos fichiers ne quittent jamais votre environnement. Aucune dépendance à un cloud tiers.</p>
+        <div class="why-title">Décidez mieux</div>
+        <p class="why-desc">Croisez billetterie, consommation, invitations, stocks et profils clients pour des décisions plus fiables — sans approximation ni instinct.</p>
       </div>
       <div class="why-card sr sr-2">
-        <div class="why-icon" style="background:rgba(6,182,212,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="why-icon" style="background:rgba(16,185,129,.1)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <div class="why-title">Multi-éditions nativement</div>
-        <p class="why-desc">Comparez 2023, 2024, 2025 en un clic. L'historique s'accumule automatiquement à chaque import. Pas de retraitement.</p>
+        <div class="why-title">Améliorez votre rentabilité</div>
+        <p class="why-desc">Identifiez vos leviers de croissance, vos pertes invisibles et les zones à optimiser pour augmenter vos marges édition après édition.</p>
       </div>
       <div class="why-card sr sr-1">
-        <div class="why-icon" style="background:rgba(16,185,129,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="why-icon" style="background:rgba(245,158,11,.1)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <div class="why-title">Import universel</div>
-        <p class="why-desc">Weezpay, Weezevent, Bizouk, Excel maison — la plateforme détecte automatiquement le format et structure les données.</p>
+        <div class="why-title">Capitalisez sur l'historique</div>
+        <p class="why-desc">Comparez vos éditions, anticipez la prochaine et transformez vos données passées en avantage compétitif durable.</p>
       </div>
       <div class="why-card sr sr-2">
         <div class="why-icon" style="background:rgba(139,92,246,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
         </div>
-        <div class="why-title">Export en 1 clic</div>
-        <p class="why-desc">Chaque module génère une présentation PDF prête pour vos réunions de direction, débriefs partenaires ou COPIL post-édition.</p>
-      </div>
-      <div class="why-card sr sr-3">
-        <div class="why-icon" style="background:rgba(245,158,11,.1)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="why-title">Adapté à toute structure</div>
-        <p class="why-desc">Festival de 500 ou 50 000 personnes, afterwork récurrent ou salon B2B annuel — l'outil scale avec votre volume et s'adapte à votre vocabulaire.</p>
+        <div class="why-title">Prise en main rapide</div>
+        <p class="why-desc">Opérationnel selon vos fichiers, votre périmètre et votre mode de déploiement — sans formation longue ni paramétrage technique.</p>
       </div>
     </div>
   </div>
@@ -889,83 +882,101 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
     </div>
     <div class="pricing-grid">
 
+      <!-- Essentiel -->
       <div class="pricing-card sr">
         <div class="pricing-header">
           <div class="pricing-badge">Essentiel</div>
-          <div class="pricing-name">Starter</div>
-          <p class="pricing-tagline">Pour les structures qui débutent avec la data événementielle.</p>
+          <div class="pricing-name">Essentiel</div>
+          <p class="pricing-tagline">Prenez le contrôle de vos données.</p>
+          <p style="font-size:.75rem;color:var(--ink-3);margin-top:.625rem;line-height:1.5">Pour petits &amp; moyens événements · 100 à 1 000 participants · &lt; 50 k€ / événement</p>
         </div>
         <div class="pricing-divider"></div>
         <ul class="pricing-feats">
-          <li>Vue Globale — KPIs clés</li>
+          <li>Déploiement adapté selon périmètre</li>
+          <li>Import CSV / Excel (Weezevent, Weezpay, Bizouk)</li>
           <li>Module Billetterie</li>
-          <li>1 édition active</li>
-          <li>Import CSV / XLSX</li>
-          <li>Export PDF basique</li>
+          <li>Module Consommation</li>
+          <li>Vue Globale de performance</li>
+          <li>Export PDF</li>
+          <li>1 session de prise en main</li>
           <li>Support par email</li>
         </ul>
         <div class="pricing-footer">
-          <button onclick="openModal()" class="pricing-cta pricing-cta-outline">Demander un devis</button>
+          <button onclick="openModal()" class="pricing-cta pricing-cta-outline">Demander une proposition</button>
         </div>
       </div>
 
+      <!-- Performance -->
       <div class="pricing-card featured sr sr-1">
         <div class="pricing-header">
-          <div class="pricing-badge">Le plus choisi</div>
+          <div class="pricing-badge">Recommandé</div>
           <div class="pricing-name">Performance</div>
-          <p class="pricing-tagline">L'offre complète pour piloter votre événement comme une entreprise.</p>
+          <p class="pricing-tagline">Mesurez, analysez, optimisez.</p>
+          <p style="font-size:.75rem;color:rgba(249,245,238,.35);margin-top:.625rem;line-height:1.5">Festivals, concerts, salons · 1 000 à 10 000 participants · 50 k€ à 300 k€</p>
         </div>
         <div class="pricing-divider"></div>
         <ul class="pricing-feats">
-          <li>6 modules intégrés</li>
-          <li>Multi-éditions illimité</li>
-          <li>Comparatif historique</li>
-          <li>Profil Client & Invitations</li>
-          <li>Stocks & Prévisions</li>
-          <li>Export PDF complet</li>
-          <li>Onboarding dédié 2h</li>
+          <li>Tout Essentiel</li>
+          <li>Gestion multi-éditions</li>
+          <li>Module Profil Client</li>
+          <li>Module Invitations &amp; Accréditations</li>
+          <li>Module Stocks &amp; Prévisions</li>
+          <li>Comparaison inter-éditions</li>
+          <li>Export PDF direction</li>
+          <li>Formation demi-journée</li>
+          <li>Support email + téléphone</li>
         </ul>
         <div class="pricing-footer">
-          <button onclick="openModal()" class="pricing-cta pricing-cta-fill">Demander un devis</button>
+          <button onclick="openModal()" class="pricing-cta pricing-cta-fill">Planifier un échange</button>
         </div>
       </div>
 
+      <!-- Premium -->
       <div class="pricing-card sr sr-2">
         <div class="pricing-header">
           <div class="pricing-badge">Premium</div>
-          <div class="pricing-name">Studio</div>
-          <p class="pricing-tagline">Pour les organisateurs avec plusieurs événements ou marques.</p>
+          <div class="pricing-name">Premium</div>
+          <p class="pricing-tagline">Pilotez la rentabilité à 360°.</p>
+          <p style="font-size:.75rem;color:var(--ink-3);margin-top:.625rem;line-height:1.5">Gros festivals, salons importants · 10 000 à 50 000 participants · 300 k€ à plusieurs M€</p>
         </div>
         <div class="pricing-divider"></div>
         <ul class="pricing-feats">
           <li>Tout Performance</li>
-          <li>Multi-événements</li>
-          <li>Utilisateurs multiples</li>
-          <li>Branding personnalisé</li>
-          <li>Connecteurs API (Weezevent…)</li>
-          <li>Formation équipe incluse</li>
+          <li>Dashboards avancés</li>
+          <li>Reprise historique</li>
+          <li>Reporting partenaires &amp; sponsors</li>
+          <li>Prévision édition suivante</li>
+          <li>Analyse avancée des invitations</li>
+          <li>Analyse des pertes invisibles</li>
+          <li>Accompagnement stratégique</li>
+          <li>Formation journée complète</li>
           <li>Support prioritaire</li>
         </ul>
         <div class="pricing-footer">
-          <button onclick="openModal()" class="pricing-cta pricing-cta-outline">Demander un devis</button>
+          <button onclick="openModal()" class="pricing-cta pricing-cta-outline">Obtenir une proposition</button>
         </div>
       </div>
 
+      <!-- Enterprise -->
       <div class="pricing-card sr sr-3">
         <div class="pricing-header">
           <div class="pricing-badge">Enterprise</div>
-          <div class="pricing-name">Groupe</div>
-          <p class="pricing-tagline">Déploiement sur mesure pour groupes, collectivités ou réseaux.</p>
+          <div class="pricing-name">Enterprise</div>
+          <p class="pricing-tagline">Pour les structures multi-événements.</p>
+          <p style="font-size:.75rem;color:var(--ink-3);margin-top:.625rem;line-height:1.5">Groupes, collectivités, réseaux · 50 000+ participants ou portefeuille multi-événements</p>
         </div>
         <div class="pricing-divider"></div>
         <ul class="pricing-feats">
-          <li>Architecture sur mesure</li>
-          <li>Intégrations spécifiques</li>
-          <li>Hébergement dédié</li>
-          <li>SLA garanti</li>
-          <li>Modules additionnels</li>
+          <li>Tout Premium</li>
+          <li>Gestion multi-événements</li>
+          <li>Multi-utilisateurs</li>
+          <li>Modules personnalisés</li>
+          <li>Environnement dédié</li>
+          <li>Gouvernance des données</li>
+          <li>Reporting consolidé</li>
+          <li>Intégrations sur mesure</li>
           <li>Account manager dédié</li>
-          <li>Audit data annuel</li>
+          <li>Accompagnement stratégique renforcé</li>
         </ul>
         <div class="pricing-footer">
           <button onclick="openModal()" class="pricing-cta pricing-cta-outline">Nous contacter</button>
@@ -973,7 +984,6 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
       </div>
 
     </div>
-    <p class="pricing-note sr">Toutes les offres incluent une démo personnalisée avant engagement · Déploiement en 48h · Aucun abonnement minimum imposé</p>
   </div>
 </section>
 
@@ -981,10 +991,42 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
 <section class="bg-deep" id="securite">
   <div class="wrap">
     <div class="sr">
-      <p class="eyebrow" style="color:var(--accent-lt)">Confiance &amp; Sécurité</p>
-      <h2 class="d2" style="color:#fff">Vos données restent <em>chez vous.</em></h2>
-      <p class="lead" style="color:rgba(249,245,238,.48);margin-top:.875rem">Pas de cloud tiers. Pas de partage. Vos données événementielles, billetterie et client restent dans votre environnement.</p>
+      <p class="eyebrow" style="color:var(--accent-lt)">Sécurité &amp; Propriété des données</p>
+      <h2 class="d2" style="color:#fff">Vos données restent <em>sous votre contrôle.</em></h2>
+      <p class="lead" style="color:rgba(249,245,238,.48);margin-top:.875rem">Selon vos contraintes, Event Analytics peut être déployé en local, dans un environnement dédié ou dans une version hébergée sécurisée. Vos données ne vous appartiennent qu'à vous.</p>
     </div>
+
+    <!-- 3 modes de déploiement -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;margin-bottom:3rem">
+      <div class="sec-point sr" style="flex-direction:column;gap:.875rem">
+        <div style="display:flex;align-items:center;gap:.75rem">
+          <div class="sec-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <strong style="color:#fff;font-size:.9375rem">Déploiement local</strong>
+        </div>
+        <p style="color:rgba(249,245,238,.42);font-size:.8375rem;line-height:1.6;margin:0">Sur votre machine ou vos serveurs internes. Données 100% locales, aucun accès réseau requis. Vous gérez les sauvegardes.</p>
+      </div>
+      <div class="sec-point sr sr-1" style="flex-direction:column;gap:.875rem;border-color:rgba(200,92,60,.2);background:rgba(200,92,60,.04)">
+        <div style="display:flex;align-items:center;gap:.75rem">
+          <div class="sec-icon" style="background:rgba(200,92,60,.12);border-color:rgba(200,92,60,.25)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-lt)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <strong style="color:#fff;font-size:.9375rem">Environnement dédié</strong>
+        </div>
+        <p style="color:rgba(249,245,238,.42);font-size:.8375rem;line-height:1.6;margin:0">Infrastructure dédiée, isolée, gérée conjointement. Accès multi-utilisateurs, sauvegardes encadrées, maintenance définie contractuellement.</p>
+      </div>
+      <div class="sec-point sr sr-2" style="flex-direction:column;gap:.875rem">
+        <div style="display:flex;align-items:center;gap:.75rem">
+          <div class="sec-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <strong style="color:#fff;font-size:.9375rem">Version hébergée sécurisée</strong>
+        </div>
+        <p style="color:rgba(249,245,238,.42);font-size:.8375rem;line-height:1.6;margin:0">Hébergement sécurisé avec accès contrôlé. Vos données restent isolées — aucune mutualisation, aucune revente, aucun usage tiers.</p>
+      </div>
+    </div>
+
     <div class="sec-grid">
       <div class="sec-points">
         <div class="sec-point sr">
@@ -992,17 +1034,17 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <strong>Hébergement dans votre infrastructure</strong>
-            <p>La plateforme se déploie sur vos serveurs ou votre machine locale. Aucune donnée ne transite par un serveur externe.</p>
+            <strong>Vous êtes propriétaire de vos données</strong>
+            <p>Vos données événementielles, billetterie, client et financières ne sont jamais revendues, ni partagées, ni utilisées à d'autres fins.</p>
           </div>
         </div>
         <div class="sec-point sr sr-1">
           <div class="sec-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
           <div>
-            <strong>Données clients & billetterie sensibles protégées</strong>
-            <p>Emails, profils d'achat, données nominatives — traités localement. Conformité RGPD simplifiée car aucun sous-traitant tiers.</p>
+            <strong>Conformité RGPD facilitée</strong>
+            <p>Emails, profils d'achat, données nominatives traités dans votre périmètre. Pas de sous-traitant tiers à déclarer pour le traitement courant.</p>
           </div>
         </div>
         <div class="sec-point sr sr-2">
@@ -1010,8 +1052,8 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <div>
-            <strong>Accès contrôlé par votre équipe</strong>
-            <p>Gestion des droits utilisateurs en interne. Pas de compte Saas, pas de mots de passe stockés à l'extérieur.</p>
+            <strong>Accès aux données encadré contractuellement</strong>
+            <p>En cas d'intervention support ou prestation, l'accès à vos données est limité au périmètre validé. Aucune action non sollicitée.</p>
           </div>
         </div>
         <div class="sec-point sr sr-3">
@@ -1019,31 +1061,32 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
           <div>
-            <strong>Export &amp; sauvegarde sous votre contrôle</strong>
-            <p>Vos archives sont dans votre système de fichiers. Sauvegardez comme n'importe quel document interne.</p>
+            <strong>Sauvegardes selon votre mode de déploiement</strong>
+            <p>Local : vous gérez vos archives. Environnement dédié ou hébergé : sauvegardes définies dans le contrat de service.</p>
           </div>
         </div>
       </div>
       <div class="sec-visual sr sr-2">
         <div class="sec-badge">
           <div class="sec-badge-dot"></div>
-          <p>Données hébergées localement</p>
+          <p>Données propriétaires — jamais revendues</p>
         </div>
         <div class="sec-badge">
           <div class="sec-badge-dot"></div>
-          <p>Zéro envoi vers un cloud tiers</p>
+          <p>3 modes de déploiement disponibles</p>
         </div>
         <div class="sec-badge">
           <div class="sec-badge-dot"></div>
-          <p>Conformité RGPD facilitée</p>
+          <p>RGPD — aucun sous-traitant imposé</p>
         </div>
         <div class="sec-badges">
-          <span class="sec-tag">Hébergement local</span>
+          <span class="sec-tag">Déploiement local</span>
+          <span class="sec-tag">Env. dédié</span>
+          <span class="sec-tag">Cloud sécurisé</span>
           <span class="sec-tag">RGPD</span>
-          <span class="sec-tag">Données propriétaires</span>
-          <span class="sec-tag">Accès contrôlé</span>
-          <span class="sec-tag">Export libre</span>
-          <span class="sec-tag">Audit interne</span>
+          <span class="sec-tag">Propriété client</span>
+          <span class="sec-tag">Zéro revente</span>
+          <span class="sec-tag">Accès encadré</span>
         </div>
       </div>
     </div>
@@ -1089,7 +1132,7 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
         <h2 class="growth-h">Sans données claires,<br><em>vous décidez à l'instinct.</em></h2>
         <p class="growth-body">Chaque édition, des centaines de milliers d'euros passent entre vos mains. Quels produits commander ? Quelles zones ouvrir ? Quelles invitations supprimer ?</p>
         <button onclick="openModal()" class="btn btn-primary btn-lg">
-          Voir la démo gratuitement
+          Planifier un échange de 30 minutes
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
         <div class="checks">
@@ -1097,19 +1140,19 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
             <div class="check-mark">
               <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Démo gratuite · Aucun engagement
+            Démonstration sur vos données · Aucun engagement
           </div>
           <div class="check">
             <div class="check-mark">
               <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Adapté à votre secteur en 48h
+            Proposition adaptée à votre type d'événement
           </div>
           <div class="check">
             <div class="check-mark">
               <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            Déploiement adapté · données chez vous
+            Déploiement local, dédié ou hébergé selon vos contraintes
           </div>
         </div>
       </div>
@@ -1135,7 +1178,7 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
     <div class="urgency-bar sr">
       <div class="urgency-dot"></div>
       <p><strong>Votre prochaine édition approche.</strong> Chaque semaine sans données fiables, c'est une décision de plus prise à l'instinct.</p>
-      <button onclick="openModal()" class="btn btn-primary" style="flex-shrink:0">Réserver ma démo</button>
+      <button onclick="openModal()" class="btn btn-primary" style="flex-shrink:0">Planifier un échange</button>
     </div>
   </div>
 </section>
@@ -1166,13 +1209,13 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
 <section class="cta-section">
   <div class="wrap">
     <h2 class="cta-title sr">Prêt à piloter<br>par la data ?</h2>
-    <p class="cta-sub sr">Démo personnalisée en 48h. Adapté à votre secteur. Sans engagement.</p>
+    <p class="cta-sub sr">Échange de 30 minutes · Démonstration sur vos données · Proposition adaptée à votre structure.</p>
     <div class="cta-btns sr">
       <button onclick="openModal()" class="btn btn-lg" style="background:#fff;color:var(--accent);font-weight:700">
-        Demander une démo gratuite
+        Planifier un échange de 30 min
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
-      <a href="#modules" class="btn btn-inv btn-lg">Voir les modules</a>
+      <a href="#pricing" class="btn btn-inv btn-lg">Voir les offres</a>
     </div>
     <div class="cta-pills sr">
       <span class="cta-pill">Festival</span>
@@ -1180,9 +1223,10 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
       <span class="cta-pill">Salon</span>
       <span class="cta-pill">Escape Game</span>
       <span class="cta-pill">Concert</span>
-      <span class="cta-pill">Toute entreprise</span>
+      <span class="cta-pill">Événement corporate</span>
+      <span class="cta-pill">Multi-événements</span>
     </div>
-    <p class="cta-note sr">Gratuit · Réponse en 48h · Aucune carte bancaire requise</p>
+    <p class="cta-note sr">Sans engagement · Aucune carte bancaire · Réponse sous 48h</p>
   </div>
 </section>
 
@@ -1207,9 +1251,9 @@ footer{background:var(--deep);border-top:1px solid rgba(249,245,238,.05);padding
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&#x2715;</button>
     <div id="formContent">
-      <p class="eyebrow" style="margin-bottom:.875rem">Démo gratuite</p>
-      <h2 class="modal-title" id="modalTitle">Demandez votre<br><em>démonstration</em></h2>
-      <p class="modal-sub">Réponse sous 48h. Adapté à votre secteur et vos données.</p>
+      <p class="eyebrow" style="margin-bottom:.875rem">Échange gratuit · 30 minutes</p>
+      <h2 class="modal-title" id="modalTitle">Obtenez une proposition<br><em>adaptée à votre événement</em></h2>
+      <p class="modal-sub">Démonstration sur vos données. Proposition adaptée à votre structure. Réponse sous 48h.</p>
       <form action="https://formspree.io/f/xwvayzev" method="POST" onsubmit="handleSubmit(event)">
         <input type="hidden" name="_subject" value="Demande de démo Event Analytics">
         <div class="form-row">
